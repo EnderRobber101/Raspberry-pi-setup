@@ -12,6 +12,8 @@ sudo apt install -y python3 python3-pip
 sudo apt install -y g++
 sudo apt install -y mono-complete
 sudo apt install -y gcc
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
+sudo apt-get install -y nodejs
 
 sudo apt install -y code
 
@@ -27,7 +29,7 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 #portainer
 docker volume create portainer_data
